@@ -30,13 +30,14 @@ for (var property in workDay) {
     var presentHour = moment().hour();
     var timeString = $(timeId).text();
     var timeNumber = hourNumberFromHourString(timeString);
+    console.log(timeNumber, presentHour, timeString)
     if (timeNumber < presentHour) {
         $(textEntry).addClass("past");
     } else if (timeNumber > presentHour) {
         $(textEntry).addClass("future");
     } else {
         $(textEntry).addClass("present");
-    }
+    } 
     counter++;
 }
 
